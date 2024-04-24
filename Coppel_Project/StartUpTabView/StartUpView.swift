@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct StartUpView: View {
+    @EnvironmentObject var userInfo: UserInfo
+    @EnvironmentObject var setUpUserTag: StartUpTabViewModel
+    
+    @Binding var showStartUp: Bool
+    
+    @State var addInfo = AddInfoViewModel()
+    @State var authenticationManager = AuthenticationManager()
+    
+    @State var showIntereses: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading){
-            Text("Bienvenido")
-                .font( .title)
-                .fontWeight(.bold)
+//            Text("Bienvenido")
+//                .font( .title)
+//                .fontWeight(.bold)
             
             Text("¿Tienes Cuenta Bancaria?")
                 .font(.title2)
@@ -20,7 +30,8 @@ struct StartUpView: View {
             
             HStack{
                 Button{
-                    
+                    showIntereses = true
+//                    showStartUp = false
                 } label:{
                     Text("Si")
                         .font(.title3)
@@ -32,7 +43,7 @@ struct StartUpView: View {
                 }
                 
                 Button{
-                    
+                    setUpUserTag.startUpTag = 2
                 } label:{
                     Text("No")
                         .font(.title3)
@@ -43,10 +54,28 @@ struct StartUpView: View {
                         .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.coppelYellow))
                 }
             }
+            
+            Text("Soy empleador")
+        }
+        .onAppear{
+            Task{
+                do{
+                    userInfo.user = try await addInfo.getUserInfo(user: try authenticationManager.getAuthenticatedUser().uid)
+                    
+                    if userInfo.user.tipo_usuario == "Empleado"{
+                        showIntereses = true
+                    }
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $showIntereses, onDismiss: {
+            setUpUserTag.startUpTag = 2
+        }) {
+            InterestsView(showIntereses: $showIntereses)
         }
     }
 }
 
-#Preview {
-    StartUpView()
-}
+//#Preview {
+//    StartUpView()
+//}
