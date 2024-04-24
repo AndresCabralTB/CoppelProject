@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673A1F5E2BD8872400717520 /* StartUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A1F5D2BD8872400717520 /* StartUpView.swift */; };
+		673A1F602BD8895F00717520 /* TopicStartUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A1F5F2BD8895F00717520 /* TopicStartUp.swift */; };
 		67AB92222BD884BA00836D55 /* Coppel_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB92212BD884BA00836D55 /* Coppel_ProjectApp.swift */; };
 		67AB92242BD884BA00836D55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB92232BD884BA00836D55 /* ContentView.swift */; };
 		67AB92262BD884BE00836D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67AB92252BD884BE00836D55 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		673A1F5D2BD8872400717520 /* StartUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpView.swift; sourceTree = "<group>"; };
+		673A1F5F2BD8895F00717520 /* TopicStartUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicStartUp.swift; sourceTree = "<group>"; };
 		67AB921E2BD884BA00836D55 /* Coppel_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coppel_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67AB92212BD884BA00836D55 /* Coppel_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coppel_ProjectApp.swift; sourceTree = "<group>"; };
 		67AB92232BD884BA00836D55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		67AB92382BD884BE00836D55 /* Coppel_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Coppel_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67AB923C2BD884BE00836D55 /* Coppel_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coppel_ProjectUITests.swift; sourceTree = "<group>"; };
 		67AB923E2BD884BE00836D55 /* Coppel_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coppel_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BC6EA0CC2BD88AC9006826E3 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		673A1F622BD8896700717520 /* StartUp */ = {
+			isa = PBXGroup;
+			children = (
+				673A1F5D2BD8872400717520 /* StartUpView.swift */,
+				673A1F5F2BD8895F00717520 /* TopicStartUp.swift */,
+			);
+			path = StartUp;
+			sourceTree = "<group>";
+		};
 		67AB92152BD884BA00836D55 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +108,8 @@
 		67AB92202BD884BA00836D55 /* Coppel_Project */ = {
 			isa = PBXGroup;
 			children = (
+				BC6EA0CB2BD88A8A006826E3 /* Componentes */,
+				673A1F622BD8896700717520 /* StartUp */,
 				67AB92212BD884BA00836D55 /* Coppel_ProjectApp.swift */,
 				67AB92232BD884BA00836D55 /* ContentView.swift */,
 				67AB92252BD884BE00836D55 /* Assets.xcassets */,
@@ -125,6 +141,14 @@
 				67AB923E2BD884BE00836D55 /* Coppel_ProjectUITestsLaunchTests.swift */,
 			);
 			path = Coppel_ProjectUITests;
+			sourceTree = "<group>";
+		};
+		BC6EA0CB2BD88A8A006826E3 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EA0CC2BD88AC9006826E3 /* InputView.swift */,
+			);
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				67AB92242BD884BA00836D55 /* ContentView.swift in Sources */,
+				673A1F5E2BD8872400717520 /* StartUpView.swift in Sources */,
 				67AB92222BD884BA00836D55 /* Coppel_ProjectApp.swift in Sources */,
+				673A1F602BD8895F00717520 /* TopicStartUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
